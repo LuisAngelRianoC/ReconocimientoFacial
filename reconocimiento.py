@@ -58,8 +58,8 @@ def face_recognizer(folderPath):
             # Muestra la etiqueta de la predicción en el fotograma
             cv2.putText(frame, '{}'.format(result), (x, y - 5), 1, 1.3, (255, 255, 0), 1, cv2.LINE_AA)
 
-            # Si la confianza de la predicción es menor a 5800, se considera una coincidencia
-            if result[1] < 5800:
+            # Si la confianza de la predicción es menor a 82, se considera una coincidencia
+            if result[1] < 82:
                 cv2.putText(frame, '{}'.format(imagePaths[result[0]]), (x, y - 25), 2, 1.1, (0, 255, 0), 1, cv2.LINE_AA)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             else:
